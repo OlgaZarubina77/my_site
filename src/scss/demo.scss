@@ -3,13 +3,14 @@ body {
   color: $foreground-color;
   font-family: "DINP-R", arial, serif;
   font-size: 1.3em;
+  box-sizing: border-box;
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   margin: auto;
   background-color: #333333;
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 
@@ -75,18 +76,17 @@ body {
     background-color: #74c4ff;
     color: black;
   }
-
- 
 }
 
 .rectangle {
-  border: 1px solid #be72ff;
+  border: 2px solid #be72ff;
   width: 201px;
   height: 33px;
   right: 40px;
   top: 49px;
   position: absolute;
   display: inline-block;
+  border-radius: 3px;
 }
 
 .logo__search {
@@ -106,4 +106,61 @@ body {
   height: 31px;
   right: 40px;
   top: 41px;
+}
+
+.main {
+  width: 100%;
+  height: 900px;
+  margin-top: 24px;
+}
+
+.article {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background: url("../images/content/mountain_goat.png");
+  background-size: cover;
+
+  &__title {
+    color: #74c4ff;
+    font-size: 80px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-right: 350px;
+    text-shadow: 0px 0px 5px #333;
+  }
+
+  &_text {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 600px;
+    text-shadow: 0px 0px 6px #333;
+  }
+
+  &_tab {
+    background: #be72ff;
+    color: #222;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 125px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #333;
+    font-size: 17px;
+  }
+}
+
+.posts {
+ display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+
+}
+
+.posts_section {
+  width: 40%;
+  height: 40%;
 }
