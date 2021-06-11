@@ -2,17 +2,16 @@ body {
   background: red;
   color: $foreground-color;
   font-family: "DINP-R", arial, serif;
-  font-size: 1.3em;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   margin: auto;
   background-color: #333333;
-  height: 100vh;
+  height: 100%;
   position: relative;
-  width: 1260px;
-  height: 1423px;
 }
 
 .header {
@@ -20,52 +19,301 @@ body {
   width: 100%;
 }
 
-.circle {
-  width: 50px;
-  height: 48px;
-  border: 3px solid #74c4ff;
-  border-radius: 20px;
-  display: inline-block;
-  position: absolute;
-  left: 149px;
-  top: 30px;
+.header-top {
+  width: 100%;
+  height: 80px;
 }
 
-.logo__text {
-  display: inline-block;
-  color: #8a72ff;
-  position: absolute;
-  font-style: normal;
-  font-weight: bold;
-  background: #333333;
-  width: 101px;
-  height: 29px;
-  left: calc(50% - 101px / 2 - 413.5px);
-  top: calc(50% - 29px / 2 - 656px);
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  width: 90px;
+
+  &__circle {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #74c4ff;
+    border-radius: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+  }
+
+  &__text {
+    display: inline-block;
+    color: #8a72ff;
+    position: absolute;
+    font-style: normal;
+    font-weight: bold;
+    background: #333333;
+    width: 93px;
+    height: 28px;
+    left: 15px;
+    top: 8px;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 50px;
-  background-color: #74C4FF;
-  margin: 100px;
+
+  &_active {
+    background-color: #74c4ff;
+    color: black;
+  }
 }
 
 .rectangle {
-  border: 1px solid #be72ff;
+  border: 2px solid #be72ff;
   width: 201px;
   height: 33px;
-  left: 909px;
-  top: 40px;
+  right: 40px;
+  top: 49px;
   position: absolute;
   display: inline-block;
+  border-radius: 3px;
 }
 
 .logo__search {
+  display: inline-block;
   position: absolute;
   width: 72px;
   height: 31px;
-  left: 1038px;
-  top: 41px;
+  right: 39px;
+  top: 49px;
   background: #be72ff;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.search {
+  height: 31px;
+  right: 40px;
+  top: 41px;
+}
+
+.main {
+  width: 100%;
+  height: 2900px;
+  margin-top: 24px;
+}
+
+.article {
+  position: static;
+  width: 100%;
+  height: 500px;
+  background: url("../images/content/mountain_goat.png");
+  background-size: cover;
+
+  &__title {
+    color: #74c4ff;
+    font-size: 80px;
+    font-weight: bold;
+    margin-left: 40px;
+    padding-top: 20px;
+    margin-right: 350px;
+    text-shadow: 0px 0px 5px #333;
+  }
+
+  &_text {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 600px;
+    text-shadow: 0px 0px 6px #333;
+  }
+
+  &_tab {
+    background: #be72ff;
+    color: #222;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 125px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #333;
+    font-size: 17px;
+  }
+}
+
+.posts {
+  display: flex;
+  flex-flow: column wrap;
+  height: 700px;
+  padding-left: 40px;
+  font-size: 16px;
+
+  &_section {
+    width: 40%;
+    height: 40%;
+  }
+  &__section {
+    width: 40%;
+    height: 300px;
+    padding-block: 150px;
+  }
+}
+
+.cap {
+  display: flex;
+  padding-top: 55px;
+  position: fixed-box;
+padding-bottom: 30px;
+
+  &_pink_point {
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #be72ff;
+    border-radius: 100%;
+  }
+
+  &_blu_point {
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #74c4ff;
+    border-radius: 100%;
+  }
+  &_name_post {
+    position: static;
+    font-size: 17px;
+    padding-left: 30px;
+    padding-right: 10px;
+    font-weight: bold;
+  }
+
+  &_pink_line {
+    width: 330px;
+    height: 16px;
+    background: #be72ff;
+    padding-top: 19px;
+  }
+
+  &_blu_line {
+    position: static;
+    width: 330px;
+    height: 16px;
+    background: #74c4ff;
+    padding-top: 19px;
+  }
+}
+
+.matter {
+  display: flex;
+  align-content: space-between;
+
+  &_post_picture_1 {
+    position: static;
+    width: 220px;
+    height: 220px;
+    background: url("../images/content/doggy.png");
+    background-size: cover;
+  }
+
+  &_post_picture_2 {
+    position: static;
+    width: 220px;
+    height: 220px;
+    background: url("../images/content/lemur.png");
+    background-size: cover;
+  }
+
+  &_post_picture_3 {
+    position: static;
+    width: 220px;
+    height: 220px;
+    background: url("../images/content/jobs.png");
+    background-size: cover;
+  }
+
+   &_post_picture_4 {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background: url("../images/content/rapuncel.png");
+    background-size: cover;
+  }
+
+  &_post_text {
+    width: 350px;
+    padding-left: 15px;
+    font-size: 16px;
+  }
+
+  &_inset {
+    padding-left: 15px;
+    text-decoration: underline;
+  }
+}
+
+.inset {
+    padding-left: 15px;
+  }
+
+.post_text {
+padding-left: 15px;
+padding-right: 100px;
+}
+
+.low_posts {
+display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 80px;
+  padding-top: 5%;
+padding-left: 40px;
+}
+
+.advertisement {
+  display: flex;
+  flex-direction: column;
+
+&_playbill_1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: url("../images/content/car.png");
+    background-size: cover;
+  }
+
+  &_playbill_2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: url("../images/content/ifon.png");
+    background-size: cover;
+  }
+
+  &_playbill_3 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: url("../images/content/bbc.png");
+    background-size: cover;
+  }
+  &_poster_text {
+    padding-left: 15px;
+padding-right: 100px;
+  }
 }
