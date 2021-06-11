@@ -1,5 +1,5 @@
 body {
-  background: red;
+  background: #333;
   color: $foreground-color;
   font-family: "DINP-R", arial, serif;
   font-size: 100%;
@@ -110,7 +110,7 @@ body {
 
 .main {
   width: 100%;
-  height: 2900px;
+  height: 2040px;
   margin-top: 24px;
 }
 
@@ -122,6 +122,7 @@ body {
   background-size: cover;
 
   &__title {
+    width: 621px;
     color: #74c4ff;
     font-size: 80px;
     font-weight: bold;
@@ -132,6 +133,7 @@ body {
   }
 
   &_text {
+    width: 621px;
     margin-left: 40px;
     margin-top: 20px;
     margin-right: 600px;
@@ -298,7 +300,6 @@ body {
   height: 472px;
   padding-top: 150px;
   padding-left: 40px;
-  
 }
 
 .advertisement {
@@ -333,7 +334,6 @@ body {
     background: url("../images/content/bbc.png");
     box-shadow: 0px 0px 7px black;
     background-size: cover;
-    
   }
   &_poster_text {
     padding-left: 15px;
@@ -410,4 +410,14 @@ body {
     background-size: cover;
     border-radius: 40px;
   }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95px;
+  font-weight: 700;
+  background: #8A72FF;
+
 }
