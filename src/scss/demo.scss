@@ -7,16 +7,16 @@ body {
 }
 
 .container {
+  position: relative;
   width: 95%;
+  height: 100%;
   margin: auto;
   background-color: #333333;
-  height: 100%;
-  position: relative;
 }
 
 .header {
-  height: 146px;
   width: 100%;
+  height: 146px;
 }
 
 .header-top {
@@ -157,15 +157,16 @@ body {
   display: flex;
   flex-flow: column wrap;
   height: 700px;
-  padding-left: 40px;
+  width: 1680px;
+  margin-left: 10%;
   font-size: 16px;
 
   &_section {
-    width: 40%;
-    height: 40%;
+    width: 585px;
+    height: 350px;
   }
   &__section {
-    width: 40%;
+    width: 585px;
     height: 300px;
     padding-block: 150px;
   }
@@ -175,13 +176,13 @@ body {
   display: flex;
   padding-top: 55px;
   position: fixed-box;
-padding-bottom: 30px;
+  padding-bottom: 30px;
 
   &_pink_point {
     display: inline-block;
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 21px;
     background: #be72ff;
     border-radius: 100%;
   }
@@ -189,8 +190,8 @@ padding-bottom: 30px;
   &_blu_point {
     display: inline-block;
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 21px;
     background: #74c4ff;
     border-radius: 100%;
   }
@@ -216,6 +217,12 @@ padding-bottom: 30px;
     background: #74c4ff;
     padding-top: 19px;
   }
+  &_pink_line_2 {
+    width: 1550px;
+    height: 16px;
+    background: #be72ff;
+    padding-top: 19px;
+  }
 }
 
 .matter {
@@ -226,7 +233,9 @@ padding-bottom: 30px;
     position: static;
     width: 220px;
     height: 220px;
+    border: 4px solid #74c4ff;
     background: url("../images/content/doggy.png");
+    box-shadow: 0px 0px 7px black;
     background-size: cover;
   }
 
@@ -234,7 +243,9 @@ padding-bottom: 30px;
     position: static;
     width: 220px;
     height: 220px;
+    border: 4px solid #74c4ff;
     background: url("../images/content/lemur.png");
+    box-shadow: 0px 0px 7px black;
     background-size: cover;
   }
 
@@ -242,15 +253,19 @@ padding-bottom: 30px;
     position: static;
     width: 220px;
     height: 220px;
+    border: 4px solid #74c4ff;
     background: url("../images/content/jobs.png");
+    box-shadow: 0px 0px 7px black;
     background-size: cover;
   }
 
-   &_post_picture_4 {
+  &_post_picture_4 {
     position: relative;
     width: 220px;
     height: 220px;
+    border: 4px solid #74c4ff;
     background: url("../images/content/rapuncel.png");
+    box-shadow: 0px 0px 7px black;
     background-size: cover;
   }
 
@@ -267,53 +282,132 @@ padding-bottom: 30px;
 }
 
 .inset {
-    padding-left: 15px;
-  }
+  padding-left: 15px;
+}
 
 .post_text {
-padding-left: 15px;
-padding-right: 100px;
+  padding-left: 15px;
+  padding-right: 100px;
 }
 
 .low_posts {
-display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  height: 80px;
-  padding-top: 5%;
-padding-left: 40px;
+  height: 472px;
+  padding-top: 150px;
+  padding-left: 40px;
+  
 }
 
 .advertisement {
   display: flex;
   flex-direction: column;
 
-&_playbill_1 {
+  &_playbill_1 {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 85px;
+    height: 60px;
+    border: 2px solid white;
     background: url("../images/content/car.png");
+    box-shadow: 0px 0px 7px black;
     background-size: cover;
   }
 
   &_playbill_2 {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 85px;
+    height: 60px;
+    border: 2px solid white;
     background: url("../images/content/ifon.png");
+    box-shadow: 0px 0px 7px black;
     background-size: cover;
   }
 
   &_playbill_3 {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 85px;
+    height: 60px;
+    border: 2px solid white;
     background: url("../images/content/bbc.png");
+    box-shadow: 0px 0px 7px black;
     background-size: cover;
+    
   }
   &_poster_text {
     padding-left: 15px;
-padding-right: 100px;
+    padding-right: 100px;
+  }
+}
+
+.assembly {
+  display: inline-flex;
+  margin-left: 10px;
+}
+
+.wording {
+  margin-left: 10px;
+}
+
+.poster_name {
+  margin-left: 16px;
+}
+
+.client {
+  width: 91%;
+  margin: 0 auto;
+}
+
+.clients {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &_label_1 {
+    position: relative;
+    width: 195px;
+    height: 195px;
+    background: url("../images/content/flowers.png");
+    box-shadow: 0px 0px 7px black;
+    background-size: cover;
+    border-radius: 40px;
+  }
+  &_label_2 {
+    position: relative;
+    width: 195px;
+    height: 195px;
+    background: url("../images/content/mma.png");
+    box-shadow: 0px 0px 7px black;
+    background-size: cover;
+    border-radius: 40px;
+  }
+  &_label_3 {
+    position: center;
+    width: 195px;
+    height: 175px;
+    margin-top: 14px;
+    background: url("../images/content/beer.png");
+    box-shadow: 0px 0px 7px black;
+    background-size: cover;
+    border-radius: 40px;
+  }
+  &_label_4 {
+    position: relative;
+    width: 195px;
+    height: 195px;
+    background: url("../images/content/samura.png");
+    box-shadow: 0px 0px 7px black;
+    background-size: cover;
+    border-radius: 40px;
+  }
+  &_label_5 {
+    position: relative;
+    width: 195px;
+    height: 195px;
+    background: url("../images/content/custom.png");
+    box-shadow: 0px 0px 7px black;
+    background-size: cover;
+    border-radius: 40px;
   }
 }
